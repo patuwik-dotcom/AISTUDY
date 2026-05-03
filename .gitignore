@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Environment variables (contains your secret API key!)
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+npm-debug.log*
+*.log
+
+# Temporary files
+*.tmp
+*.temp

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Study With Me</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- LEFT: POMODORO TIMER -->
+  <div class="pomodoro-sidebar">
+    <div class="sidebar-title">Try POMODORO</div>
+
+    <!-- Mode buttons -->
+    <div class="pomo-modes">
+      <button class="mode-btn active" onclick="setMode('focus')">Focus</button>
+      <button class="mode-btn" onclick="setMode('short')">Short Break</button>
+      <button class="mode-btn" onclick="setMode('long')">Long Break</button>
+    </div>
+
+    <!-- Timer display -->
+    <div class="timer-display" id="timerDisplay">25:00</div>
+
+    <!-- Controls -->
+    <div class="pomo-controls">
+      <button class="pomo-btn" onclick="startTimer()">Start</button>
+      <button class="pomo-btn secondary" onclick="pauseTimer()">Pause</button>
+      <button class="pomo-btn secondary" onclick="resetTimer()">Reset</button>
+    </div>
+
+    <!-- Session counter -->
+    <div class="pomo-sessions">
+      <span class="sessions-label">Sessions done</span>
+      <span class="sessions-count" id="sessionCount">0</span>
+    </div>
+
+  </div>
+
+  <!-- MIDDLE: CHAT -->
+  <div class="chat-section">
+
+    <div class="chat-header">
+      <h1>Hello there!</h1>
+      <p>How can I help you today?</p>
+    </div>
+
+
+    <!-- Chat messages -->
+    <div id="responseBox"></div>
+
+    <!-- Input area -->
+    <div class="input-area">
+      <textarea id="userInput" placeholder="Send a message..."></textarea>
+      <button class="send-btn" onclick="sendMessage()">&#8593;</button>
+    </div>
+
+  </div>
+
+  <!-- RIGHT: NOTEBOOK -->
+  <div class="notes-section">
+    <h2 class="notes-title">Notebook</h2>
+
+    <input id="noteTitle" placeholder="Note title..." />
+    <textarea id="notesArea" placeholder="Write your notes here..."></textarea>
+
+    <div class="notes-buttons">
+      <button class="note-btn" onclick="saveNote()">Save Note</button>
+      <button class="note-btn secondary" onclick="askFromNotes()">Ask AI about notes</button>
+    </div>
+
+    <h3 class="saved-label">Saved Notes</h3>
+    <div id="notesList"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
